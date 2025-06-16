@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Parabéns!</title>
+  <title>Sorteio JBL Go 4</title>
   <style>
     * {
       box-sizing: border-box;
@@ -13,7 +13,7 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #1c1c1c, #2d2d2d);
+      background: linear-gradient(to right, #111, #222);
       color: #f0f0f0;
       display: flex;
       flex-direction: column;
@@ -22,22 +22,22 @@
     }
 
     h1 {
-      font-size: 2.8rem;
-      color: #00aaff;
+      font-size: 2.6rem;
+      color: #ff5500;
       text-align: center;
       margin: 30px 0;
     }
 
-    .iphone-img {
+    .jbl-img {
       width: 100%;
-      max-width: 300px;
+      max-width: 280px;
       height: auto;
       margin-bottom: 20px;
     }
 
     .contador {
       font-size: 1.2rem;
-      color: #ff5555;
+      color: #ff7777;
       margin: 20px 0;
       animation: blink 1.2s infinite;
       text-align: center;
@@ -49,7 +49,7 @@
     }
 
     form {
-      background: #121212;
+      background: #151515;
       padding: 25px;
       border-radius: 12px;
       width: 100%;
@@ -92,7 +92,7 @@
     .cookies input[type="checkbox"] {
       width: 18px;
       height: 18px;
-      accent-color: #00aaff;
+      accent-color: #ff5500;
     }
 
     .cookies label {
@@ -104,7 +104,7 @@
       width: 100%;
       margin-top: 20px;
       padding: 14px;
-      background-color: #007acc;
+      background-color: #ff5500;
       color: white;
       border: none;
       border-radius: 8px;
@@ -113,7 +113,7 @@
     }
 
     button:hover {
-      background-color: #005f99;
+      background-color: #cc4400;
     }
 
     /* POPUP */
@@ -156,7 +156,7 @@
     }
 
     #popup-content h2 {
-      color: #ff3333;
+      color: #ff4444;
       margin-bottom: 15px;
     }
 
@@ -177,7 +177,7 @@
     #popup-content button {
       margin-top: 20px;
       padding: 10px 20px;
-      background: #ff3333;
+      background: #ff4444;
       color: white;
       border: none;
       border-radius: 6px;
@@ -195,8 +195,8 @@
         padding: 12px;
       }
 
-      .iphone-img {
-        max-width: 240px;
+      .jbl-img {
+        max-width: 220px;
       }
 
       form {
@@ -207,13 +207,15 @@
 </head>
 <body>
 
-  <h1>Parabéns! Você ganhou um iPhone 15 Pro Max!</h1>
+  <h1>Sorteio Cedtec 2B - Ganhe uma JBL Go 4!</h1>
 
-  <img class="iphone-img" src="https://raw.githubusercontent.com/hdpngworld/HPW/main/uploads/65038654434d0-iPhone%2015%20Pro%20Natural%20titanium%20png.png" alt="iPhone 15 Pro Max">
-
+  <img class="jbl-img" src="jbl.webp" alt="JBL Go 4">
+<p>Estamos realizando esse sorteio como forma de agradecimento por comparecer a nossa apresentação.</p>
   <div class="contador" id="contador">
-    Atenção: Restam apenas 2 unidades!
+    Preencha as informações para ganhar!
+    
   </div>
+  
 
   <form id="formulario">
     <label for="nome">Nome completo:</label>
@@ -233,21 +235,22 @@
 
     <div class="cookies">
       <input type="checkbox" id="cookies" required>
-      <label for="cookies">Aceito os termos e o uso de cookies</label>
+      <label for="cookies">Concordo com os termos e autorizo o uso de meus dados</label>
     </div>
 
-    <button type="submit">Confirmar meus dados</button>
+    <button type="submit">Quero minha JBL Go 4!</button>
   </form>
 
   <!-- POPUP -->
   <div id="popup">
     <div id="popup-content">
-      <h2>VOCÊ CAIU EM UM GOLPE!</h2>
-      <p>Este site é apenas uma simulação educativa.<br>Se fosse real, seus dados já teriam sido roubados!</p>
+      <h2>CAIU DIREITINHO, NÉ?</h2>
+      <p>Esse "sorteio" era uma simulação. Se fosse real, seus dados já estariam nas mãos de criminosos.</p>
       <div class="alerta">
-        Atenção! Nunca forneça seu CPF, endereço ou dados pessoais em sites suspeitos. <br>Este é apenas um exemplo educativo para fins de conscientização.
+        Nunca informe seus dados pessoais em sites duvidosos, por mais realistas que pareçam.<br><br>
+        <em>Proteja-se. Esse site é apenas para fins educativos.</em>
       </div>
-      <button onclick="fecharPopup()">Entendi</button>
+      <button onclick="fecharPopup()">Aprendi a lição</button>
     </div>
   </div>
 
@@ -256,7 +259,7 @@
       e.preventDefault();
       let popup = document.getElementById('popup');
       popup.style.display = 'flex';
-      void popup.offsetWidth; // força reflow
+      void popup.offsetWidth;
       popup.style.animation = 'fadeIn 0.5s ease forwards';
     });
 
