@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sorteio JBL Go 4</title>
   <style>
     * {
@@ -33,6 +33,15 @@
       max-width: 280px;
       height: auto;
       margin-bottom: 20px;
+    }
+
+    #textinho {
+      max-width: 480px;
+      margin: 20px auto;
+      text-align: center;
+      line-height: 1.5;
+      font-size: 1.1rem;
+      color: #ddd;
     }
 
     .contador {
@@ -110,6 +119,7 @@
       border-radius: 8px;
       font-size: 1.1rem;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
     button:hover {
@@ -202,6 +212,11 @@
       form {
         padding: 20px;
       }
+
+      #textinho {
+        max-width: 90%;
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -209,29 +224,32 @@
 
   <h1>Sorteio Cedtec 2B - Ganhe uma JBL Go 4!</h1>
 
-  <img class="jbl-img" src="jbl.webp" alt="JBL Go 4">
-<p id="textinho">Estamos realizando esse sorteio como forma de agradecimento por comparecer a nossa apresentação <br>Preencha as informações para concorrer!
-</p>
-  
+  <img class="jbl-img" src="jbl.webp" alt="JBL Go 4" />
+
+  <p id="textinho">
+    Obrigado por participar da nossa apresentação no Cedtec!<br />
+    Preencha seus dados abaixo para concorrer a uma JBL Go 4.<br />
+    O prêmio será enviado para o endereço cadastrado.
+  </p>
 
   <form id="formulario">
     <label for="nome">Nome completo:</label>
-    <input type="text" id="nome" name="nome" required>
+    <input type="text" id="nome" name="nome" required />
 
     <label for="cpf">CPF:</label>
-    <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00">
+    <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00" />
 
     <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" required>
+    <input type="email" id="email" name="email" required />
 
     <label for="telefone">Telefone:</label>
-    <input type="tel" id="telefone" name="telefone" required>
+    <input type="tel" id="telefone" name="telefone" required />
 
     <label for="endereco">Endereço para envio:</label>
     <textarea id="endereco" name="endereco" rows="3" required></textarea>
 
     <div class="cookies">
-      <input type="checkbox" id="cookies" required>
+      <input type="checkbox" id="cookies" required />
       <label for="cookies">Concordo com os termos e autorizo o uso de meus dados</label>
     </div>
 
@@ -244,7 +262,7 @@
       <h2>CAIU DIREITINHO, NÉ?</h2>
       <p>Esse "sorteio" era uma simulação. Se fosse real, seus dados já estariam nas mãos de criminosos.</p>
       <div class="alerta">
-        Nunca informe seus dados pessoais em sites duvidosos, por mais realistas que pareçam.<br><br>
+        Nunca informe seus dados pessoais em sites duvidosos, por mais realistas que pareçam.<br /><br />
         <em>Proteja-se. Esse site é apenas para fins educativos.</em>
       </div>
       <button onclick="fecharPopup()">Aprendi a lição</button>
@@ -252,20 +270,19 @@
   </div>
 
   <script>
-    document.getElementById('formulario').addEventListener('submit', function(e) {
-      e.preventDefault();
-      let popup = document.getElementById('popup');
-      popup.style.display = 'flex';
-      void popup.offsetWidth;
-      popup.style.animation = 'fadeIn 0.5s ease forwards';
-    });
+    document.getElementById('formulario').addEventListener('submit', function (e) {
+      e.preventDefault()
+      let popup = document.getElementById('popup')
+      popup.style.display = 'flex'
+      void popup.offsetWidth
+      popup.style.animation = 'fadeIn 0.5s ease forwards'
+    })
 
     function fecharPopup() {
-      let popup = document.getElementById('popup');
-      popup.style.animation = 'none';
-      popup.style.display = 'none';
+      let popup = document.getElementById('popup')
+      popup.style.animation = 'none'
+      popup.style.display = 'none'
     }
   </script>
-
 </body>
 </html>
